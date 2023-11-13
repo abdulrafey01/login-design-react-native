@@ -8,33 +8,31 @@ export default function LoginScreen() {
   const [isChecked, setIsChecked] = useState(true);
   return (
     <View className="h-full justify-center bg-white">
-      <View className="right-7" style={styles.waveSet}>
-        <Image source={require("../assets/images/wave-haikei4.png")} />
+      <View className="absolute -top-[2px] -right-[3px]">
+        <Image source={require("../assets/images/curve.png")} />
       </View>
-      <View className="absolute rounded-l-full top-[161px] right-0 bg-[#7f1bd5] h-14 w-4"></View>
-      <View className="absolute rounded-l-full top-[-37px] left-[117px] bg-[#7f1bd5] -rotate-[50deg]  h-24 w-16"></View>
       <View className=" px-7">
         <View className="mb-7">
           <Text className="text-center  font-bold text-2xl">Sign Up</Text>
         </View>
         <View style={styles.shadowContainer}>
-          <Icon name="account" size={30} color="#7f1bd5" />
+          <Icon name="account" size={30} color="#5B27E4" />
           <TextInput className="ml-3" placeholder="Name" />
         </View>
         <View style={styles.shadowContainer}>
-          <Icon name="email-open" size={30} color="#7f1bd5" />
+          <Icon name="email-open" size={30} color="#5B27E4" />
           <TextInput className="ml-3" placeholder="E-Mail" />
         </View>
         <View style={styles.shadowContainer}>
-          <Icon name="lock" size={30} color="#7f1bd5" />
+          <Icon name="lock" size={30} color="#5B27E4" />
           <TextInput className="ml-3" placeholder="Password" />
           <View className="absolute right-3 top-3">
-            <Icon name="eye" size={30} color="#7f1bd5" />
+            <Icon name="eye" size={30} color="#5B27E4" />
           </View>
         </View>
         <View className="mb-5 flex-row justify-center items-center">
           <Checkbox
-            color="#7f1bd5"
+            color="#5B27E4"
             value={isChecked}
             onValueChange={setIsChecked}
             className="h-4 w-4 mr-2"
@@ -42,15 +40,15 @@ export default function LoginScreen() {
           <Text className="text-slate-400" style={styles.textStyle1}>
             I read and agree to{" "}
           </Text>
-          <Text style={styles.textStyle1} className="text-[#7f1bd5]">
+          <Text style={styles.textStyle1} className="text-[#5B27E4]">
             Terms And Conditions
           </Text>
         </View>
         <LinearGradient
           colors={[
-            " rgba(135,13,197,1)",
-            "rgba(135,13,197,1)",
-            "rgba(22,7,181,1)",
+            "rgb(133, 51, 221)",
+            "rgb(118, 49, 230)",
+            "rgb(84, 38, 233)",
           ]}
           className="mb-10 rounded-3xl p-4"
           start={{ x: 0.1, y: 0.2 }}
@@ -62,13 +60,13 @@ export default function LoginScreen() {
           <Text className="text-slate-400" style={styles.textStyle2}>
             Already have an account?{" "}
           </Text>
-          <Text style={styles.textStyle2} className="text-[#7f1bd5]">
+          <Text style={styles.textStyle2} className="text-[#5B27E4]">
             Sign in
           </Text>
         </View>
       </View>
-      <View className="absolute bottom-0">
-        <Image source={require("../assets/images/blob-haikei2.png")} />
+      <View className="absolute left-[-2px] bottom-[-4px]">
+        <Image source={require("../assets/images/blobyes5.png")} />
       </View>
     </View>
   );
@@ -95,10 +93,11 @@ const styles = StyleSheet.create({
   },
   waveSet: {
     position: "absolute",
-    top: -50,
+    right: 0,
+    top: -250,
     transform: [
       {
-        rotate: "210deg",
+        rotate: "-160deg",
       },
     ],
   },
